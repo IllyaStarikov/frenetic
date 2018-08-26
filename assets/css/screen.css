@@ -1,20 +1,20 @@
-/*	==========================================================================
-	General styles
-	========================================================================== */
+/*    ==========================================================================
+    General styles
+    ========================================================================== */
 
 /* Font sizes used
 
 Base font size: 1rem = 18px
 
-0.702rem	13px
-0.79rem		14px
-0.889rem	16px
-1.125rem	20px
-1.266rem	23px
-1.424rem	26px
-1.602rem	29px
-1.802rem	32px
-2.887rem	52px
+0.702rem    13px
+0.79rem        14px
+0.889rem    16px
+1.125rem    20px
+1.266rem    23px
+1.424rem    26px
+1.602rem    29px
+1.802rem    32px
+2.887rem    52px
 
 http://modularscale.com/
 8:9 major second
@@ -36,73 +36,102 @@ body {
     height: 100%;
     max-height: 100%;
     width: 80%;
-    max-width: 650px;
+    max-width: 750px;
     margin: 0 auto;
-    font-family: "Lato", sans-serif;
-	font-weight: 300;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 300;
     font-size: 1rem;
     line-height: 1.7;
     color: #3A4145;
 }
 
+.MathJax, .MathJax_Display  {
+    font-weight: 300 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Bree Serif", serif;
-	font-weight: 500;
-	margin-bottom: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0;
 }
 
 h1 {
-	font-size: 1.802rem;
+    font-size: 1.802rem;
 }
 
 h2 {
-	font-size: 1.602rem;
+    font-size: 1.602rem;
 }
 
 h3 {
-	font-size: 1.424rem;
+    font-size: 1.424rem;
 }
 
 h4 {
-	font-size: 1.266rem;
+    font-size: 1.266rem;
 }
 
 h5 {
-	font-size: 1.125rem;
+    font-size: 1.125rem;
 }
 
 h6 {
-	font-size: 1rem;
+    font-size: 1rem;
 }
 
 p {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 code, tt, pre {
-    font-family: "Source Code Pro", monospace, sans-serif;
-    white-space: pre-wrap;
+    font-family: "IBM Plex Mono", monospace;
+    padding: 0.15em 0.3em;
     font-size: 0.79rem;
-    border: none;
-    background: none;
+    white-space: pre-wrap;
+    border: #E3EDF3 1px solid;
+    border-radius: 2px;
 }
 
 pre {
-	padding: 0 2em;
-	line-height: 1.3em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: #E3EDF3 1px solid;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8em;
+  white-space: pre;
+  overflow: auto;
+  background: #F7FAFB;
+  border-radius: 3px;
 }
 
-code, tt {
-	font-weight: 500;
+/* These override prism’s default codeblock styles to make them match*/
+pre[class*="language-"], .token.operator{
+  background: #F7FAFB !important;
 }
 
-pre code {
-	font-weight: 300;
+pre[class*="language-"]{
+  padding: 10px !important;
+  margin: 0 0 1.7rem 0 !important;
+}
+
+code[class*="language-"]{
+  text-shadow: none !important;
+  color: #333 !important;
+}
+
+pre code, tt {
+  font-size: inherit;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 blockquote {
-	margin: 0 2em;
-	color: #9EABB3;
+    margin: 0 2em;
+    color: #9EABB3;
 }
 
 blockquote p {
@@ -111,8 +140,8 @@ blockquote p {
 }
 
 blockquote cite {
-	font-style: normal;
-	font-size: 0.889rem;
+    font-style: normal;
+    font-size: 0.889rem;
 }
 
 hr {
@@ -124,7 +153,7 @@ hr {
 
 /* Links */
 .post a {
-    color: #FC7E0F;
+    color: #2E5EDE;
     text-decoration: none;
 }
 
@@ -138,18 +167,18 @@ hr {
 }
 
 a.read-more, a.read-more:hover, a.read-more:visited {
-    color: #FC7E0F;	/* #DA1F15, #F17F33 */
+    color: #2E5EDE;    /* #DA1F15, #F17F33 */
     text-decoration: none;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	color: #3A4145;
-	text-decoration: none;
+    color: #3A4145;
+    text-decoration: none;
 }
 
 .post-title a {
-	color: #3A4145 !important;
-	text-decoration: none !important;
+    color: #3A4145 !important;
+    text-decoration: none !important;
 }
 
 /* Tables and dictionaries (straight up ripped out of the Casper stylesheet with minor modifications) */
@@ -172,7 +201,7 @@ th, td {
 }
 
 td h3, td h4, td h5, td h6 {
-	margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
 table caption + thead tr:first-child th,
@@ -189,7 +218,7 @@ table tbody + tbody { border-top: #EFEFEF 2px solid; }
 table table table { background-color: #FFF; }
 
 th {
-	color: #000;
+    color: #000;
     background-color: #F6F6F6;
 }
 
@@ -210,9 +239,9 @@ dl dd {
     margin-bottom: 1em
 }
 
-/*	==========================================================================
-	Blog header
-	========================================================================== */
+/*    ==========================================================================
+    Blog header
+    ========================================================================== */
 
 .main-header {
     position: relative;
@@ -226,67 +255,67 @@ dl dd {
 }
 
 .main-header-content {
-	height: auto;
+    height: auto;
 }
 
 .blog-title {
     margin: 0;
     padding: 0;
-    font-family: "Lato", sans-serif;
-	font-weight: 300;
-    font-size: 2.887rem;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-weight: 300;
+    font-size: 3.5555rem;
     vertical-align: middle;
     line-height: 1;
 }
 
 .blog-title a {
-	font-color: inherit;
+    font-color: inherit;
 }
 
 .blog-description {
     margin: 0;
     font-size: 0.889rem;
-    font-family: "Lato", sans-serif;
+    font-family: 'IBM Plex Serif', serif;
     text-transform: uppercase;
     letter-spacing: 0;
     color: #9EABB3;
     font-weight: 300;
 }
 
-/*	==========================================================================
-	Navigation
-	========================================================================== */
+/*    ==========================================================================
+    Navigation
+    ========================================================================== */
 
 .nav {
-	margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .nav {
-	text-transform: uppercase;
-	font-size: .889rem;
+    text-transform: uppercase;
+    font-size: .889rem;
 }
 
 .nav a {
-	margin: 0 0.5rem;
-	color: #9EABB3;
-	text-decoration: none;
+    margin: 0 0.5rem;
+    color: #9EABB3;
+    text-decoration: none;
 }
 
 .nav a:hover {
-	color: #FC7E0F;
+    color: #2E5EDE;
 }
 
 a.nav-current {
-	color: #FC7E0F;
+    color: #2E5EDE;
 }
 
 a.nav-home, a.nav-blog {
-	color: #9EABB3;
+    color: #9EABB3;
 }
 
-/*	==========================================================================
-	Site footer
-	========================================================================== */
+/*    ==========================================================================
+    Site footer
+    ========================================================================== */
 
 .site-footer {
     position: relative;
@@ -300,12 +329,12 @@ a.nav-home, a.nav-blog {
 }
 
 .site-footer a {
-	color: #FC7E0F;
-	text-decoration: none;
+    color: #2E5EDE;
+    text-decoration: none;
 }
 
 .site-footer a:hover {
-	color: #9EABB3;
+    color: #9EABB3;
 }
 
 
@@ -313,31 +342,31 @@ a.nav-home, a.nav-blog {
 
 /*
 .site-footer .rss {
-	margin: 1rem auto;
-	width: 1.7rem;
-	height: 1.6rem;
+    margin: 1rem auto;
+    width: 1.7rem;
+    height: 1.6rem;
 }
 
 .site-footer .rss a {
-	display: block;
-	height: 100%;
-	width: 100%;
-	margin-left: -.2rem;
-	padding: .35rem .1rem 0.05rem .2rem;
-	vertical-align: middle;
-	border: 1px #FC7E0F solid;
-	border-radius: 1.2rem;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-left: -.2rem;
+    padding: .35rem .1rem 0.05rem .2rem;
+    vertical-align: middle;
+    border: 1px #2E5EDE solid;
+    border-radius: 1.2rem;
 }
 
 .site-footer .rss a:hover {
-	color: #ffffff;
-	background: #FC7E0F;
+    color: #ffffff;
+    background: #2E5EDE;
 }
 */
 
-/*	==========================================================================
-	Posts
-	========================================================================== */
+/*    ==========================================================================
+    Posts
+    ========================================================================== */
 
 .post {
     position: relative;
@@ -348,34 +377,34 @@ a.nav-home, a.nav-blog {
 }
 
 .post-header {
-	margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .post-title {
-	margin-bottom: 0;
-	line-height: 1;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
 .post-meta {
-	text-transform: uppercase;
-	font-size: .79rem;
+    text-transform: uppercase;
+    font-size: .79rem;
 }
 
 .post-footer {
-	margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .post-footer .tags a {
-	color: #9EABB3;
-	text-decoration: none;
+    color: #9EABB3;
+    text-decoration: none;
 }
 
 .post-footer .tags a:hover {
-	color: #FC7E0F;
+    color: #2E5EDE;
 }
 
 .post-footer h4 {
-	margin: 2rem 0 0;
+    margin: 2rem 0 0;
 }
 
 .post-footer .share {
@@ -395,98 +424,98 @@ a.nav-home, a.nav-blog {
 }
 
 .post img {
-	display: block;
-	max-width: 100%;	/* Keep image contained in width of post */
-	margin: 0 auto 0.5rem;
+    display: block;
+    max-width: 100%;    /* Keep image contained in width of post */
+    margin: 0 auto 0.5rem;
 }
 
 .footnotes-sep {
-	display: none;
+    display: none;
 }
 
 /* Koenig image styles */
 
 .kg-image-card {
-	margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .kg-image-card img {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .post .kg-image-wide {
-	max-width: 1050px;
-	margin: 0 -200px;
+    max-width: 1050px;
+    margin: 0 -200px;
 }
 
 @media (max-width: 1100px) {
-	.post .kg-image-wide {
-		max-width: 140%;
-		margin: 0 -20%;
-	}
+    .post .kg-image-wide {
+        max-width: 140%;
+        margin: 0 -20%;
+    }
 }
 
 @media (max-width: 950px) {
-	.post .kg-image-wide {
-		max-width: 120%;		/* Start calculating as percentage of viewport? */
-		margin: 0 -10%;
-	}
+    .post .kg-image-wide {
+        max-width: 120%;        /* Start calculating as percentage of viewport? */
+        margin: 0 -10%;
+    }
 }
 
 .post .kg-image-full {
-	max-width: 100vw;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .kg-image-card figcaption {
-	font-size: 0.79rem;
-	text-align: center;
+    font-size: 0.79rem;
+    text-align: center;
 }
 
 
 /* YouTube embed wrapper to scale to full-width */
 
 .yt-wrapper {
-	position: relative;
-	width: 100%;
-	margin: 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
 }
 
 .yt-wrapper:before{
-	content: "";
-	display: block;
-	padding-top: 56.25%;	/* 16:9 aspect ratio */
+    content: "";
+    display: block;
+    padding-top: 56.25%;    /* 16:9 aspect ratio */
 }
 
 .yt-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-/*	==========================================================================
-	Tags
-	========================================================================== */
+/*    ==========================================================================
+    Tags
+    ========================================================================== */
 
 .tag-title {
-    font-family: "Lato", sans-serif;
+    font-family: 'IBM Plex Serif', serif;
     font-size: 1.802rem;
-	font-weight: bold;
-	margin-top: 0;
+    font-weight: bold;
+    margin-top: 0;
 }
 
 .tag-image {
-	max-width: 100%
+    max-width: 100%
 }
 
 .tag-description {
-	color: #9EABB3;
+    color: #9EABB3;
 }
 
 /* ==========================================================================
@@ -530,7 +559,7 @@ a.nav-home, a.nav-blog {
 
 .older-posts:hover,
 .newer-posts:hover {
-    color: #FC7E0F;
+    color: #2E5EDE;
 }
 
 .extra-pagination {
@@ -552,15 +581,15 @@ a.nav-home, a.nav-blog {
 
 @media only screen and (max-width: 500px) {
 
-	html {
-		font-size: 100%;
-	}
+    html {
+        font-size: 100%;
+    }
 
    .blog-title {
-		font-size: 2.281rem;
-	}
-	
-	.blog-description {
-	   font-size: 0.889rem;
-	}
+        font-size: 2.281rem;
+    }
+
+    .blog-description {
+       font-size: 0.889rem;
+    }
 }

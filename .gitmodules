@@ -1,0 +1,6 @@
+[submodule "assets/fonts/font-awesome"]
+    path = assets/fonts/font-awesome
+    url = https://github.com/FortAwesome/Font-Awesome
+[submodule "assets/math-jax"]
+	path = assets/math-jax
+	url = https://github.com/mathjax/MathJax.git
